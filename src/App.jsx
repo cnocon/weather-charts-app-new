@@ -14,11 +14,14 @@
 import React, { Component } from 'react';
 import SearchBar from './containers/search_bar.jsx';
 import WeatherList from './containers/weather_list.jsx';
+import { LoadScript } from '@react-google-maps/api';
+const MAPS_API_KEY = 'AIzaSyCSXTUEm9DgP-MHuHdbiIxaWZj12z7sq1I';
 
 export default class App extends Component {
   render() {
     return (
-      <div>
+
+      <LoadScript googleMapsApiKey={MAPS_API_KEY}>
         <div className="display-4">5-Day Weather Forecast</div>
         <div className="row">
           <div className="col"><SearchBar /></div>
@@ -26,7 +29,7 @@ export default class App extends Component {
         <div className="row">
           <div className="col"><WeatherList /></div>
         </div>
-      </div>
+      </LoadScript>
     );
   }
 }
