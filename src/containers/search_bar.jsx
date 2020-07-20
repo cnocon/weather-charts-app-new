@@ -20,13 +20,20 @@ export class SearchBar extends Component {
     this.props.fetchWeather(this.state.term);
     this.setState({term: ''});
   }
+
   render() {
     return (
-      <form className="input-group col-md-6 mt-4 mb-4" onSubmit={this.onFormSubmit}>
-        <input placeholder="Search for a City" className="col-9"
-          value={this.state.term}
-          onChange={this.onInputChange} />
-        <button className="btn btn-primary col-3" type="submit">Search</button>
+      <form className="form-row align-items-center col-md-6 mb-5" onSubmit={this.onFormSubmit}>
+        
+          <div className="input-group">
+            <input placeholder="Search for a City" className="col-9 form-control"
+              value={this.state.term}
+              onChange={this.onInputChange} />
+            
+            <button className="btn btn-primary col-3" type="submit">Search</button>
+          
+          
+        </div>
       </form>
     )
   }

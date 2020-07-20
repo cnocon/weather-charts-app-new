@@ -21,9 +21,9 @@ export class WeatherList extends Component {
     return (    
       <div className="row mb-5 mt-5" key={cityData.city.name}>
         <div className="col-sm-12 col-md-6 col-lg-3 map"><Map lon={lon} lat={lat} /></div>
-        <div className="col-sm-12 col-md-6 col-lg-3 chart"><Chart data={temps} units="&deg;F" color='#28a745' /></div>
-        <div className="col-sm-12 col-md-6 col-lg-3 chart"><Chart data={pressures} units=" hPa" color='#18abc5' /></div>
-        <div className="col-sm-12 col-md-6 col-lg-3 chart"><Chart data={humidities} units="%" color='#7a2ba0' /></div>
+        <div className="col-sm-12 col-md-6 col-lg-3 chart"><Chart data={temps} units="&deg;F" color='#fff766' /></div>
+        <div className="col-sm-12 col-md-6 col-lg-3 chart"><Chart data={pressures} units=" hPa" color='#20c997' /></div>
+        <div className="col-sm-12 col-md-6 col-lg-3 chart"><Chart data={humidities} units="%" color='#3369ff' /></div>
       </div>
     );
   }

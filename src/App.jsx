@@ -22,7 +22,7 @@ export default class App extends Component {
     return (
 
       <LoadScript googleMapsApiKey={MAPS_API_KEY}>
-        <div className="display-4">5-Day Weather Forecast</div>
+        <h1>5-Day Weather Forecast</h1>
         <div className="row">
           <div className="col"><SearchBar /></div>
         </div>
