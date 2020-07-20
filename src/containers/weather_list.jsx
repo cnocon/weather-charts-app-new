@@ -19,27 +19,25 @@ export class WeatherList extends Component {
     const humidities = cityData.list.map(weather => { return weather.main.humidity });
   
     return (    
-      <tr key={cityData.city.name}>
-        <th scope="row"><GoogleMap lon={lon} lat={lat} /></th>
-        <td><Chart data={temps} units="&deg;F" color='#28a745' /></td>
-        <td><Chart data={pressures} units=" hPa" color='#18abc5' /></td>
-        <td><Chart data={humidities} units="%" color='#7a2ba0' /></td>
-      </tr>
+      <div className="row" key={cityData.city.name}>
+        <div className="col-sm-12 col-md-6 col-lg-3"><GoogleMap lon={lon} lat={lat} /></div>
+        <div className="col-sm-12 col-md-6 col-lg-3"><Chart data={temps} units="&deg;F" color='#28a745' /></div>
+        <div className="col-sm-12 col-md-6 col-lg-3"><Chart data={pressures} units=" hPa" color='#18abc5' /></div>
+        <div className="col-sm-12 col-md-6 col-lg-3"><Chart data={humidities} units="%" color='#7a2ba0' /></div>
+      </div>
     );
   }
   render() {
     return (
-      <table className="table table-hover table-responsive-sm table-bordered table-sm">
-        <thead>
-          <tr>
-            <th scope="col">City</th>
-            <th scope="col">Temperature (&deg;F)</th>
-            <th scope="col">Pressure (hPa)</th>
-            <th scope="col">Humidity (%)</th>
-          </tr>
-        </thead>
-        <tbody>{this.props.weather.map(this.renderWeather)}</tbody>
-      </table>
+      <>
+      <div className="row">
+        <div className="col-sm-12 col-md-6 col-lg-3">City</div>
+        <div className="col-sm-12 col-md-6 col-lg-3">Temperature (&deg;F)</div>
+        <div className="col-sm-12 col-md-6 col-lg-3">Pressure (hPa)</div>
+        <div className="col-sm-12 col-md-6 col-lg-3">Humidity (%)</div>
+      </div>
+      {this.props.weather.map(this.renderWeather)}
+      </>
     );
   }
 }
