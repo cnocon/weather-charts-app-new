@@ -10,11 +10,11 @@ const average = (data) => {
 export default (props) => {
   return (
     <div>
+      <h5 className="more">Avg. {average(props.data)}{props.units}</h5>
       <Sparklines height={120} width={180} data={props.data}>
         <SparklinesLine style={{ stroke: `${props.color}`, fill: `${props.color}`, fillOpacity: "0.45" }}/>
         <SparklinesReferenceLine type="avg"/>
       </Sparklines>
-      <p className="more">Avg. {average(props.data)}{props.units}</p>
     </div>
   );
 }

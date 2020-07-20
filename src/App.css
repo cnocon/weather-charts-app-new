@@ -1,12 +1,33 @@
-.App {
-  text-align: center;
-  padding: 5rem;
-  max-width: 960px;
-  margin: 0 auto;
-}
-
 html, body {
   height: 100%;
-  margin: 0;
+  margin: auto;
+  display: block;
   padding: 0;
+}
+
+body {
+  max-width: 1200px;
+}
+
+#root {
+  padding: 4em 0;
+  text-align: center;
+}
+
+.chart {
+  height: 100%;
+  width: 100%;
+}
+.chart svg {
+  height: 100%;
+}
+
+.input-group {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.input-group input,
+.input-group button  {
+  border-radius: 0;
 }

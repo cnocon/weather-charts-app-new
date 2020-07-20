@@ -22,7 +22,7 @@ export class SearchBar extends Component {
   }
   render() {
     return (
-      <form className="input-group col-md-8" onSubmit={this.onFormSubmit}>
+      <form className="input-group col-md-6 mt-4 mb-4" onSubmit={this.onFormSubmit}>
         <input placeholder="Search for a City" className="col-9"
           value={this.state.term}
           onChange={this.onInputChange} />
