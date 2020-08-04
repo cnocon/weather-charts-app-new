@@ -8,8 +8,6 @@ export const FETCH_WEATHER = 'FETCH_WEATHER';
 
 export async function fetchWeather(city) {
   const url = `${ROOT_URL}?q=${city}&appid=${process.env.REACT_APP_WEATHER_API_KEY}`;
-  let lat;
-  let lon;
 
   return axios.get(url)
     .then(res => {

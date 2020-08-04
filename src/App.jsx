@@ -1,16 +1,3 @@
-// import React from 'react';
-// import './App.css';
-
-// const App = () {
-//   return (
-//     <div className="app">
-
-//     </div>
-//   );
-// }
-
-// export default App;
-
 import React, { Component } from 'react';
 import SearchBar from './containers/search_bar.jsx';
 import WeatherList from './containers/weather_list.jsx';
