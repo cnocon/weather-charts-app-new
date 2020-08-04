@@ -16,13 +16,13 @@ import SearchBar from './containers/search_bar.jsx';
 import WeatherList from './containers/weather_list.jsx';
 import { LoadScript } from '@react-google-maps/api';
 
-const mapsKey = process.env.MAPS_API_KEY;
+const mapsKey = process.env.REACT_APP_MAPS_API_KEY;
 
 export default class App extends Component {  
   render() {
     return (
       <LoadScript googleMapsApiKey={mapsKey}>
-        <h1>5-Day Weather Forecast</h1>
+        <h1>7-Day Weather Forecast</h1>
         <div className="row">
           <div className="col"><SearchBar /></div>
         </div>

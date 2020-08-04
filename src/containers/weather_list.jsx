@@ -12,15 +12,15 @@ export class WeatherList extends Component {
         <tr key={Math.random()}><td colSpan="4" className="text-center bg-light">No Data Available</td></tr>
       );
     }
-
-    const { lon, lat } = cityData.coord;
-    const tempsKelvin = cityData.list.map(weather => { return weather.main.temp });
+    const lon = cityData.lon;
+    const lat = cityData.lat;
+    const tempsKelvin = cityData.daily.map(weather => { return weather.temp.day });
     const temps = tempsKelvin.map(temp => {return temp * (9/5) - 459.67});
-    const pressures = cityData.list.map(weather => { return weather.main.pressure });
-    const humidities = cityData.list.map(weather => { return weather.main.humidity });
+    const pressures = cityData.daily.map(weather => { return weather.pressure });
+    const humidities = cityData.daily.map(weather => { return weather.humidity });
   
     return (    
-      <div className="row mb-5 mt-5" key={cityData.city.name}>
+      <div className="row mb-5 mt-5" key={cityData.lat}>
         <div className="col-sm-12 col-md-6 col-lg-3 map"><Map lon={lon} lat={lat} /></div>
         <div className="col-sm-12 col-md-6 col-lg-3 chart"><Chart data={temps} units="&deg;F" color='#fff766' /></div>
         <div className="col-sm-12 col-md-6 col-lg-3 chart"><Chart data={pressures} units=" hPa" color='#20c997' /></div>
