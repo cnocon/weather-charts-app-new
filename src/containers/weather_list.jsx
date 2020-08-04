@@ -5,6 +5,7 @@ import Map from '../components/Map';
 
 export class WeatherList extends Component {
   renderWeather(cityData) {
+    console.log(cityData);
     // Handle instances where city can't be found.
     if (!cityData) {
       return (
@@ -12,7 +13,7 @@ export class WeatherList extends Component {
       );
     }
 
-    const { lon, lat } = cityData.city.coord;
+    const { lon, lat } = cityData.coord;
     const tempsKelvin = cityData.list.map(weather => { return weather.main.temp });
     const temps = tempsKelvin.map(temp => {return temp * (9/5) - 459.67});
     const pressures = cityData.list.map(weather => { return weather.main.pressure });
