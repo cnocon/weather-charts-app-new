@@ -15,7 +15,7 @@ const min = data => {
   return _.round(_.min(data));
 }
 
-export default (props) => {
+const Chart = (props) => {
   return (
     <div>
       <h6><em>Avg. {average(props.data)}{props.units}<br/>High: {max(props.data)}{props.units} / Low: {min(props.data)}{props.units}</em></h6>
@@ -26,3 +26,5 @@ export default (props) => {
     </div>
   );
 }
+
+export default Chart;
